@@ -8,7 +8,8 @@
 </head>
 <body>
 	<?php 
-		echo"Olá mundo!!!";
-	?>
+		echo 'APREDENDO GIT/GITHUB - CONTROLE DE VERSAO';
+		echo "Ola udemy";
+	 ?>
 </body>
 </html>
