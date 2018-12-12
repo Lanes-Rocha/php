@@ -8,11 +8,7 @@
 </head>
 <body>
 	<?php 
-		echo"Olá mundo!!!";
-		echo"Ola brasil";
-		echo"Ola UVV";
-	echo"Ola UVV";
-	echo"Ola UVV";
+		echo"Quero ser feliz";
 	
 	?>
 </body>
