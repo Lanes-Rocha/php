@@ -8,11 +8,7 @@
 </head>
 <body>
 	<?php 
-		echo"Olá mundo!!!";
-		echo"Olá gente";
-		echo "gavioes da fiel";
-		echo "Sou programador";
-		echo "VAI DAR CONFLITO";
+		echo "Editado";
 	?>
 </body>
 </html>
