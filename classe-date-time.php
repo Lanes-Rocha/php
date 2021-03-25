@@ -9,9 +9,21 @@
 	<body>
 		<?php 
 			$dt = new DateTime();
-			$dt->add();
-			
+			$periodo = new DateInterval("P15D");//Na ducomentação do php o metodo DateInterval explica P15D
+												/*
+													P  = Período
+													15 = Quantidade
+													D = dias
+
+												*/
+
+			echo $dt->format("d/m/Y H:i:s");//Metodo format();
+
+			$dt->add($periodo);
+
+			echo "<br>";
 			echo $dt->format("d/m/Y H:i:s");
+			
 
 		 ?>
 	</body>
