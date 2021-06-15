@@ -13,7 +13,11 @@
 
     $objeto = new Pessoa();
     echo $objeto->nome . "<br>";
-    //echo $objeto->idade . "<br>";
-    //echo $objeto->senha . "<\br>";
+    
+    //echo $objeto->idade . "<br>";// Como é protected tanto a classe Pessoa e as classes que herdam 
+                                   // a mesma consegue acessar o conteúdo do atributo $idade.
+
+    //echo $objeto->senha . "<\br>";// Como é private esse atributo somente a classe Pesso consegui 
+                                    //acessar o conteúdo do atributo $senha.
 
 ?>
