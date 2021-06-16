@@ -1,14 +1,10 @@
 <?php
-    /* 
-        Interface obriga a você utilizar os métodos 
-        declados.
-    */
-    interface Veiculo{
+     interface Veiculo{
         public function acelerar($velocidade);
         public function frenar($velocidade);
         public function trocarMarcha($marcha);
     }
-    class Civic implements Veiculo{
+    abstract class Automovel implements Veiculo{
         public function acelerar($velocidade){
             echo "O veículo acelerou até " . $velocidade . " km/h";
         }
@@ -20,8 +16,18 @@
         }
 
     }//Classe Civic
+    class DelRey extends Automovel{
+        public function empurrar(){
 
-    $carro = new Civic();
+        }
+    }
+    $carro = new DelRey();
     $carro->trocarMarcha(1);
+    echo "<br>";
+    $carro->acelerar(200);
+    echo "<br>";
+    $carro->frenar(210);
+    
+    
 
 ?>
