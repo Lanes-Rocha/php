@@ -1,0 +1,17 @@
+<?php
+    function incluirClasses($nomeClasse){
+        if(file_exists($nomeClasse.".php") === true){
+            require_once($nomeClasse.".php");
+        }
+    }
+    //spl siginifica Standard PHP Librire
+    spl_autoload_register("incluirClasses");
+    spl_autoload_register(function($nomeClasse){
+        if(file_exists("Abstrata" . DIRECTORY_SEPARATOR . $nomeClasse.".php") === true){
+            require_once("Abstrata" . DIRECTORY_SEPARATOR . $nomeClasse.".php");
+        }
+    });
+
+    $carro = new DelRey();
+    $carro->acelerar(80);
+?>
