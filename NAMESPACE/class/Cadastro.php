@@ -17,11 +17,20 @@
         public function setNome($nome){
             return $this->nome = $nome;
         }
-        public function setNome($email){
+        public function setEmail($email){
             return $this->email = $email;
         }
-        public function setNome($senha){
+        public function setSenha($senha){
             return $this->senha = $senha;
+        }
+
+        public function __toString(){
+            return json_encode(array(
+                "nome"=>$this->getNome(),
+                "email"=>$this->getEmail(),
+                "senha"=>$this->getSenha()
+
+            ));
         }
     }
 ?>
