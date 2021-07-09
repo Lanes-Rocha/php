@@ -1,15 +1,17 @@
 <?php
     $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
 
-    $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(:LOGIN, :PASSWORD)");
+    $stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
 
-    $login = "jose";
-    $password = "12345678";
+    $login = "joao da peste";
+    $password = "valhala";
+    $id = 5;
 
     $stmt->bindParam(":LOGIN", $login);
     $stmt->bindParam(":PASSWORD", $password);
+    $stmt->bindParam(":ID", $id);
 
     $stmt->execute();
 
-    echo "Inserido com sucesso";
+    echo "Atualizado com sucesso";
 ?>
