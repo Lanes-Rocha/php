@@ -5,7 +5,7 @@
 
     $login = "joao da peste";
     $password = "valhala";
-    $id = 5;
+    $id = 1;
 
     $stmt->bindParam(":LOGIN", $login);
     $stmt->bindParam(":PASSWORD", $password);

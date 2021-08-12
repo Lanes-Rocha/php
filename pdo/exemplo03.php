@@ -3,8 +3,8 @@
 
     $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(:LOGIN, :PASSWORD)");
 
-    $login = "jose";
-    $password = "12345678";
+    $login = "putodavida";
+    $password = "pt321";
 
     $stmt->bindParam(":LOGIN", $login);
     $stmt->bindParam(":PASSWORD", $password);
