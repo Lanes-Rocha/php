@@ -1,13 +1,15 @@
 <?php
     $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
+    $conn->beginTransaction();
 
-    $stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = :ID");
+    $stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = ?");
 
-    $id = 7;
+    $id = 4;
     
-    $stmt->bindParam(":ID", $id);//bindParam identifica o parêmetro :ID automaticamente.
+    $stmt->execute(array($id));
 
-    $stmt->execute();
+    //$conn->rollback();//a função rollback() volta com as informações deletadas do banco.
 
+    $conn->commit();//a função commit() confirma a exclusão do arquivo do banco
     echo "Deletado com sucesso!!!";
 ?>
