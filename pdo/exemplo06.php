@@ -1,17 +1,13 @@
 <?php
     $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
 
-    $stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
+    $stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = :ID");
 
-    $login = "joao da peste";
-    $password = "valhala";
-    $id = 1;
-
-    $stmt->bindParam(":LOGIN", $login);
-    $stmt->bindParam(":PASSWORD", $password);
-    $stmt->bindParam(":ID", $id);
+    $id = 7;
+    
+    $stmt->bindParam(":ID", $id);//bindParam identifica o parêmetro :ID automaticamente.
 
     $stmt->execute();
 
-    echo "Atualizado com sucesso!!!";
+    echo "Deletado com sucesso!!!";
 ?>
